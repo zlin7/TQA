@@ -1,0 +1,35 @@
+Name,itemid,DBSOURCE
+Bilirubin,1538.0,carevue
+Bilirubin,225690.0,metavision
+Creatinine,1525.0,carevue
+Creatinine,220615.0,metavision
+Diastolic blood pressure,8368.0,carevue
+Diastolic blood pressure,220180.0,metavision
+FiO2,223835.0,metavision
+FiO2,3420.0,carevue
+Glucose,807.0,carevue
+Glucose,225664.0,metavision
+Heart Rate,211.0,carevue
+Heart Rate,220045.0,metavision
+Hematocrit,813.0,carevue
+Hematocrit,220545.0,metavision
+Hemoglobin,814.0,carevue
+Hemoglobin,220228.0,metavision
+Mean blood pressure,52.0,carevue
+Mean blood pressure,220181.0,metavision
+Platelet,828.0,carevue
+Platelet,227457.0,metavision
+Potassium,1535.0,carevue
+Potassium,227442.0,metavision
+Respiratory Rate,618.0,carevue
+Respiratory Rate,220210.0,metavision
+SpO2,220277.0,metavision
+SpO2,646.0,carevue
+Systolic blood pressure,51.0,carevue
+Systolic blood pressure,220179.0,metavision
+Temperature,223761.0,metavision
+Temperature,678.0,carevue
+WBC,1542.0,carevue
+WBC,220546.0,metavision
+Weight,763.0,carevue
+Weight,224639.0,metavision
