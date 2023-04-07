@@ -7,7 +7,7 @@ from data.online_dataset import DatasetWrapperFull, get_split_idx
 
 MIMIC_ROOT = os.path.join(DATA_PATH, 'MIMIC')
 """
---SQL Queries 
+--SQL Queries
 
 
 SELECT distinct p1.subject_id
@@ -62,6 +62,7 @@ def _process_mimic_data(autoregressive=False, Y_col ='WBC high'):
                  'Temperature', 'Weight']
     mean_cols += ['Heart Rate', 'Respiratory Rate']
 
+    # Please refer to notebook/mimic_processing.ipynb to get this csv file.
     df = pd.read_csv(os.path.join(MIMIC_ROOT, 'processed.csv'))
     df['date'] = df['date'].map(pd.to_datetime)
     df = df.reindex(columns=[f"{c} high" for c in summ_cols] + [f"{c} low" for c in summ_cols] + mean_cols + ['date', 'subject_id', 'age'])

@@ -1,16 +1,18 @@
 import os.path
 
 import pandas as pd
+import persist_to_disk as ptd
 import torch
 
+import data.online_dataset as dld
 import models
 import models.base_rnn as base_rnn
-import models.qrnn as qrnn
 import models.dprnn as dprnn
-from _settings import COVID_NAME, MIMIC_NAME, GEFCom_NAME, BASE_MODEL_PATH, EEG_NAME
+import models.qrnn as qrnn
 import utils.evaluate as eval_utils
 import utils.utils1 as utils
-import data.online_dataset as dld
+from _settings import (BASE_MODEL_PATH, COVID_NAME, EEG_NAME, MIMIC_NAME,
+                       GEFCom_NAME)
 
 DEFAULT_PARAMETERS = {
     "batch_size": 128,
@@ -137,7 +139,7 @@ def get_calibrated_model(dataset, baseline, params=None, seed=0, device='cpu'):
     model = model.eval()
     return model
 
-#@putils.persist_flex(expand_dict_kwargs='all', skip_kwargs=['gpu_id'], groupby=['dataset', 'baseline'])
+@ptd.persistf(expand_dict_kwargs='all', skip_kwargs=['gpu_id'], groupby=['dataset', 'baseline'])
 def get_results_general(dataset, baseline, seed=0, params=None, correct_alpha=False, alpha=None,
                         pred_kwargs={},
                         **kwargs):
