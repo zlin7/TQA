@@ -18,6 +18,6 @@ The [demo](https://github.com/zlin7/TQA/blob/main/notebook/demo.ipynb) notebook 
 `env.yml` contains the full environment.
 
 ### Update 4/7/2023
-All my experiments were run by caching down the results and then reading/analyzing them.
-You need [persist-to-disk](https://pypi.org/project/persist-to-disk/) for this (Feel free to use it in your own research!).
-If you don't need this functionality, you can comment out the decorator (`@ptd.persistf`) in `main_experiments.py`.
+I cached and analyzed the results of all my experiments. 
+You'd need [persist-to-disk](https://pypi.org/project/persist-to-disk/) for this (Feel free to use it in your own research!).
+If you don't need this feature, you can comment out the decorator (`@ptd.persistf`) in `main_experiments.py`.
